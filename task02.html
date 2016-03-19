@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+	<title>IFE Spring Step One Task 1</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: "Microsoft Yahei UI", sans-serif;
+	}
+	/*头部导航栏*/
+	header{
+		width: 100%;
+		height: 76px;
+		background-color: #6633ff;
+	}
+	#banner{
+		width: 100%;
+		height: 100px;
+	}
+	#banner a{
+		font-size: 15px;
+		color: white;
+		text-decoration: none;
+	}
+	#banner a:hover{
+		font-size: 20px; 
+	}
+	#banner img{
+		margin: 0px 60px;
+		float: left ;
+		height: 75px;
+	}
+	#nav{
+		margin: 0px 30px;
+		float: right;
+		height: 100px;
+		line-height: 60px;
+	}
+	#nav li{
+		display: inline-block;
+		margin:0px 20px;
+	}
+	/*主体文章*/
+    #mainbody{
+		background-color: rgb(222,222,222);	
+		width: 100%;
+		padding: 20px 0px;	
+	}
+	section,aside{
+		background-color: white;
+		border: solid rgb(203,203,203);
+		box-shadow: 3px 3px 3px rgb(170,170,170);
+		width: 90%;
+		padding: 25px;
+		margin: 20px auto;
+	}
+	article{
+        line-height: 30px;
+		font-size: 20px;
+		text-indent: 2em;		
+	}
+	.head{
+		line-height: 47px;
+	}
+	.section1 img, .section2 img{
+		padding: 10px 0px;
+	}
+    /*图片区*/
+	.pic-list{list-style: none;}
+	.pic-list li{
+		width: 220px;
+		border: 1px #ccc solid;
+		box-sizing: border-box;
+		padding: 0 10px 10px 10px;
+		margin: 20px 0px 5px 20px;
+	}
+	/*排名及表格*/
+	.rank{
+		padding: 10px 0 0 50px;
+	}
+	table{
+		border: 0; 
+		width: 100%; 
+		border-collapse: collapse;
+	}
+    td, th{
+    	border: 0; 
+    	padding: 5px; 
+    	border: 1px #ccc solid;     	
+    }
+    th{
+    	background: #333; 
+    	color: #fff; 
+    	text-align: left;
+    }
+    tfoot{
+    	background: #ccc; 
+    	font-weight: bold;
+    }
+    /*侧栏*/
+    .register-table{
+    	margin-left: 25%;
+    	
+    }
+    .register-table ul{
+    	list-style: none;
+    }
+    .register-table li{
+    	padding-top: 10px;
+    	
+    }
+    .register-table li label,span{
+    	display: inline-block;
+    	text-align: right;
+    	width: 30%;
+    	margin-right: 1em;
+    	margin-top: 0.7em;
+    }
+    .attention{
+    	padding-left: 180px;
+    	font-size: 15px;
+    	opacity: 0.7;
+    }
+    .submit-button{
+    	display: block;
+    	background-color: #3355D0;
+    	color: white;
+    	font-size: 20px;
+    	width: 100%;
+    	height: 40px;
+    	margin-top: 10px;
+    	line-height: 35px;
+    	border-radius: 15px;
+    	margin-left: -17%;
+    }
+	/*底栏*/
+	footer{
+		width: 100%;
+		height: 60px;
+		margin-bottom: 0;
+		background-color: green;
+	}
+	footer p{
+		display: block;
+		padding: 15px 0px;
+		text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+<header>
+<div id="banner">
+	<img src="logo.png" href="http://ife.baidu.com" title="baidu" alt="baidu-logo" target="_blank"/>
+	<ul id="nav">
+		<li><a href="#">导航链接一</a></li>
+		<li><a href="#">导航链接二</a></li>
+		<li><a href="#">导航链接三</a></li>
+		<li><a href="#">导航链接四</a></li>
+	</ul>
+</div>
+</header>
+
+<div id="mainbody">
+	<section class="section1">
+	<div class="head">
+	    <h2>文章一级标题</h2>
+	    <h3>文章二级标题</h3>
+	    <p><strong>作者 时间</strong></p>
+	</div>
+	<article>
+	    <p>文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落
+	    <a href="http://ife.baidu.com">链接地址http://ife.baidu.com</a></p>
+	    <img src="img1.gif">
+	    <p>文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落
+	    <a href="http://ife.baidu.com">链接地址http://ife.baidu.com</a></p>
+	  </article>
+    </section>
+
+<section class="section2">
+    <div class="head">
+	    <h2>另一篇文章一级标题</h2>
+	    <h3>文章二级标题</h3>
+	    <p><strong>作者 时间</strong></p>
+	</div>
+	<article>
+	    <p>文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落 文章内容这是一个很长的段落<a href="http://ife.baidu.com">链接地址http://ife.baidu.com</a></p>
+	    <img src="img1.gif">
+	    <dl>
+	    	<dt>列表项目一</dt>
+	    	<dt>列表项目二</dt>
+	    	<dt>列表项目三</dt>
+	    </dl>
+	</article>
+</section>
+
+<section class="section3">
+	<h2>图片</h2>
+	<ul class="pic-list">
+		<li>
+			好看的图片<br/>
+			<img src="img1.gif" />
+		</li>
+		<li>
+			好看的图片<br/>
+			<img src="img1.gif" />
+		</li>
+	</ul>
+</section>
+
+<section class="section4">
+<div class="head">
+	<h2>末篇文章一级标题</h2>
+	<h2>文章二级标题</h2>
+	<p><strong>作者 时间</strong></p>
+	<ol class="rank">
+		<li>排名 1</li>
+		<li>排名 2</li>
+		<li>排名 3</li>
+	</ol>
+	</div>
+	<table border="1">
+	    <caption>下为表格</caption>
+		<tr>
+			<th>表头</th>
+			<th>表头</th>
+			<th>表头</th>
+	    </tr>
+		<tr>
+			<td>cell 1</td>
+			<td>cell 2</td>
+			<td><a href="#">operate</a></td>
+		</tr>
+		<tr>
+			<td>cell 1</td>
+			<td>cell 2</td>
+			<td><a href="#">operate</a></td>
+		</tr>
+		<tr>
+			<td>cell 1</td>
+			<td>cell 2</td>
+			<td><a href="#">operate</a></td>
+		</tr>
+		<tfoot>
+			<th>Total</th>
+			<th>1000</th>
+			<th></th>
+		</tfoot>
+	</table>
+</section>	
+
+<aside>
+	<h2>侧栏标题</h2>
+	<form method="post" action="register" class="register-table">
+		<ul>
+			<li>
+				<label>请输入一个邮箱地址：</label>
+		        <input type="text" name="mail" /><br/>
+		        <span class="attention">邮箱地址请按要求输入</span>
+			</li>
+			<li>
+		        <label>请输入密码：</label>
+		        <input type="password" name="psd" />
+			</li>
+			<li>
+				<label>请重复输入密码：</label>
+				<input type="password" name="psd2" /><br/>
+		        <span class="attention">密码为6-16位英文数字</span>
+			</li>
+			<li>
+				<label>性别：</label>
+				<input type="radio" name="sex" value="男"/>男<input type="radio" name="sex" value="女" />女
+			</li>
+			<li>
+				<label>城市：</label>
+			    <select name="city">
+				<option value="北京">北京</option>
+				<option value="上海">上海</option>
+				<option value="广州">广州</option>
+				<option value="深圳">深圳</option>
+				</select>
+			</li>
+			<li>
+				<label>爱好：</label>
+				<input type="checkbox" name="hobby" value="运动">运动</input>
+				<input type="checkbox" name="hobby" value="艺术">艺术</input>
+				<input type="checkbox" name="hobby" value="科学">科学</input>
+			</li>
+			<li>
+				<label style="vertical-align: top;">个人描述：</label>
+				<textarea row="20" cols="50" placeholder="多行文本框"></textarea>
+			</li>		
+		</ul>		
+		<input type="submit" class="submit-button" />
+	</form>
+</aside>
+</div>
+<footer>
+	<p>版权所有&copy;</p>
+</footer>
+</body>
+</html>
