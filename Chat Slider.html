@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chat Slider</title>
+	<style type="text/css">
+	body{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: #777;
+	}
+	#spa{
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		bottom: 8px;
+		right: 8px;
+		border-radius: 8px 8px 0 8px;
+		background-color: #fff;
+	}
+	.spa-slider{
+		position: absolute;
+		bottom: 0;
+		right: 2px;
+		width: 300px;
+		height: 16px;
+		cursor: pointer;
+		border-radius: 8px 0 0 0;
+		background-color: #f00;
+	}
+	</style>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+	/*jslint*/
+	//Module /spa/
+	//Provide chat slider capability
+	var spa = (function ($){
+		//set constant
+		var configMap = {
+			extended_height: 434,
+			extended_title: 'Click to retract',
+			retracted_height: 16,
+			retracted_title: 'Click to extend',
+			template_html: '<div class = "spa-slider"></div>',
+		},
+		//declare all other scope variables
+		$chatSlider, toggleSlider, onClickSlider, initModule;
+		//DOM method /toggleSlider/
+		toggleSlider = function(){
+			var slider_height = $chatSlider.height();
+			//extend slider if fully retraxted
+			if (slider_height===configMap.retracted_height){
+				$chatSlider.animate({height: configMap.extended_height, opacity: '0.5'}).attr('title', configMap.extended_title);
+				return true;
+			}
+			//retract slider if fully extended
+			else if(slider_height===configMap.extended_height){
+				$chatSlider.animate({height: configMap.retracted_height, opacity: '1'}).attr('title', configMap.retracted_title);
+				return true;
+			}
+			return false;
+		}
+		//event /onClickSlider/
+		onClickSlider = function(event){
+			toggleSlider();
+			return false;
+		};
+		//public method /initModule/
+		initModule = function($container){
+			//render HTML
+			$container.html(configMap.template_html);
+			$chatSlider = $container.find('.spa-slider');
+			$chatSlider.attr('title', configMap.retracted_title)
+			           .click(onClickSlider);
+			return true;
+		};
+		return{initModule: initModule};
+	}(jQuery));
+	jQuery(document).ready(
+		function(){spa.initModule(jQuery('#spa'));});
+	</script>
+</head>
+<body>
+	<div id="spa">
+	</div>
+</body>
+</html>
